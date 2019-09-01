@@ -1,0 +1,53 @@
+.container{
+    display: grid;
+    grid-area: 100vw 100vh;
+    justify-content: stretch;
+    align-content: stretch;
+    grid-template-columns: 50px auto 50px;
+    grid-template-rows: [top-start] 30px [top-end] 70px [body-end] 30px [foot-1-end] 30px [foot-2-end];
+    grid-template-areas: 
+    "top top top"
+    ". body ."
+    "foot-1 foot-1 foot-1"
+    "foot-2 foot-2 foot-2"
+}
+.top{ 
+    grid-area: top;
+    justify-content: end;
+    align-content: center;
+    background-color: white;
+    border: 5px;
+    padding: 10px; 
+}
+.body{
+    grid-area: body;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 5px;
+    padding: 10px; 
+
+}
+
+.foot-1{
+    grid-area: foot-1;
+    justify-content: center;
+    align-content: center;
+    background-color: #F2F2F2;
+    border: 1px rgb(214, 214, 214);
+    border-style: solid;
+    padding: 0px;
+}
+
+.foot-2{
+    grid-area: foot-2;
+    align-items: center;
+    background-color: #F2F2F2;
+    border: 1px rgb(214, 214, 214);
+    border-style: solid;
+    border-top-style: none;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    padding: 0px;
+}
