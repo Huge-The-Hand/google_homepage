@@ -1,15 +1,19 @@
+.body{
+    margin: 0px; 
+}
 .container{
     display: grid;
-    grid-area: 100vw 100vh;
+    grid-area: 100% 100%;
     justify-content: stretch;
     align-content: stretch;
-    grid-template-columns: 50px auto 50px;
-    grid-template-rows: [top-start] 30px [top-end] 70px [body-end] 30px [foot-1-end] 30px [foot-2-end];
+    grid-template-columns: 50px auto auto 50px;
+    grid-template-rows: [top-start] 30px [top-end] 780px [body-end] 30px [foot-1-end] 30px [foot-2-end];
     grid-template-areas: 
-    "top top top"
-    ". body ."
-    "foot-1 foot-1 foot-1"
-    "foot-2 foot-2 foot-2"
+    "top top top top"
+    ". body body ."
+    "foot-1 foot-1 foot-1 foot-1"
+    "foot-2 foot-2 foot-2 foot-2";
+    
 }
 .top{ 
     grid-area: top;
@@ -36,18 +40,32 @@
     background-color: #F2F2F2;
     border: 1px rgb(214, 214, 214);
     border-style: solid;
-    padding: 0px;
+    border-bottom: 0px;
+    padding: 5px;
 }
 
 .foot-2{
     grid-area: foot-2;
-    align-items: center;
+    display: flex;
     background-color: #F2F2F2;
     border: 1px rgb(214, 214, 214);
     border-style: solid;
-    border-top-style: none;
-    border-right-style: solid;
-    border-bottom-style: solid;
-    border-left-style: solid;
-    padding: 0px;
+    padding: 5px;
+}
+
+#ft2-block1 {
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+}
+
+#ft2-block2 {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+h8{
+    padding: 3px;
+    border: 3px;
 }
